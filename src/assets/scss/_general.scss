@@ -1,5 +1,15 @@
+@import "./_variables.scss";
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    position: relative;
+}
+
+.btn-warning{
+    background-color: var(--bs-warning-rgb);
+    color: white;
+    font-size: .6rem;
+    border-radius: 20px;
+    border: 0;
 }
