@@ -45,7 +45,7 @@ footer{
     .footer-icon{
         padding-bottom: 2rem;
         & img{
-            width: 100px;
+            width: 125px;
         }
         
     }

@@ -1,15 +1,48 @@
 @import "./_variables.scss";
 #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     position: relative;
 }
 
-.btn-warning{
-    background-color: var(--bs-warning-rgb);
-    color: white;
-    font-size: .6rem;
-    border-radius: 20px;
-    border: 0;
+section{
+    padding-top:3rem;
+    padding-bottom:3rem
 }
+
+.color-scorpion{
+    color: var(--color-scorpion)
+}
+
+.my-btn-warning{
+    color: var(--color-alabaster);
+    background-color: var(--color-yellow-orange);
+    border-radius: 17px;
+    font-size: .8rem;
+    transition: all .3s ease-in-out;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
+    &:hover{
+        background-color: var(--color-tulip-tree);
+        color:var(--color-alabaster)
+    }
+}
+
+.my-btn-primary{
+    background-color: var(--color-science-blue);
+    color: var(--color-alabaster);
+    border-radius: 17px;
+    font-size: .8rem;
+    transition: all .3s ease-in-out;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    transition: all .3s ease-in-out;
+
+    &:hover{
+        background-color: var(--color-science-blue-dark);
+        color:var(--color-alabaster);
+    }
+}
+

@@ -6,16 +6,16 @@
                     <div class="my-navbar-logo">
                         <img src="../../public/images/logo_seo_w_1x.png" alt="Logo Seo">
                     </div>
-                    <div class="my-nav d-flex flex-grow-1 align-items-center">
-                        <ul class="my-nav-list d-flex flex-grow-1 justify-content-end">
-                            <li v-for="(link,i) in headerLinks" :key="i"  class="my-nav-list-item">
-                                <a class="my-nav-list-item-link" href="#">
+                    <div class="menu d-flex flex-grow-1 align-items-center">
+                        <ul class="menu-list d-flex flex-grow-1 justify-content-end">
+                            <li v-for="(link,i) in headerLinks" :key="i"  class="menu-list-item">
+                                <a class="menu-list-item-link" href="#">
                                     {{link}}
                                 </a>
                             </li>
                         </ul>
                         <div class="cta">
-                            <button class="btn btn-warning">GET IN TOUCH NOW</button>
+                            <button class="btn my-btn-warning">GET IN TOUCH NOW</button>
                         </div>
                     </div>
                 </div>
@@ -54,30 +54,30 @@ header{
     right: 0;
 }
 .my-navbar{
-    font-size: .7rem;
+    font-size: .9rem;
     & .my-navbar-logo{
-        width: 100px;
+        width: 125px;
 
         & img{
             width: 100%;
         }
     }
 
-    & .my-nav{
-        & .my-nav-list{
+    & .menu{
+        & .menu-list{
             margin: 0;
             padding: 0;
             list-style: none;
 
-            & .my-nav-list-item{
+            & .menu-list-item{
                 padding: .5rem 1rem
                 
             }
 
-            & .my-nav-list-item-link{
+            & .menu-list-item-link{
                 text-decoration: none;
                 padding: .5rem 1rem;
-                color: white;
+                color: var(--color-alabaster);
                 display: block;
             }
         }
