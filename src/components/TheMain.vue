@@ -1,7 +1,8 @@
 <template>
     <main>
         <SectionMeetNewAgency :info-cards="InfoCards"></SectionMeetNewAgency>
-        <SectionOurServices :infoCards="infoCardsOurServices"></SectionOurServices>
+        <SectionOurServices :info-cards="infoCardsOurServices"></SectionOurServices>
+        <SectionOurWorks :info-cards="InfoCardsOurWorks"></SectionOurWorks>
         <TheBanner></TheBanner>
     </main>
 </template>
@@ -9,6 +10,7 @@
 <script>
 import SectionMeetNewAgency from './SectionMeetNewAgency.vue'
 import SectionOurServices from './SectionOurServices.vue'
+import SectionOurWorks from './SectionOurWorks.vue'
 import TheBanner from './TheBanner.vue'
 export default {
     data(){
@@ -55,6 +57,14 @@ export default {
                     subtitle : "Vestibulum in lacinia metus, Suspendisse in enim ipsum. nulla faciis. Donec ante turpis, dictum sed magna et, dapibus faucibus odio.",
                     linkText: "ReadMore"
                 },
+            ],
+            InfoCardsOurWorks:[
+                "case-study-gallery-3-1-400x300.jpg",
+                "case-study-gallery-2-400x300.jpg",
+                "case-study-gallery-1-1-400x300.jpg",
+                "case-study-gallery-4-1-400x300.jpg",
+                "case-study-gallery-5-1-400x300.jpg",
+                "case-study-gallery-6-1-400x300.jpg",
             ]
             
         }
@@ -63,6 +73,7 @@ export default {
         SectionMeetNewAgency,
         TheBanner,
         SectionOurServices,
+        SectionOurWorks,
     }
 
 }
