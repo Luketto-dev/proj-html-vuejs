@@ -1,11 +1,14 @@
 <template>
-  <div class="section-card">
+  <div class="section-card" :class="InfoCard.linkText ? 'bg-lucky-point' : 'bg-white'">
     <div><i class="fa-solid" :class="InfoCard.iconClass"></i></div>
     <div class="section-card-title">
         <h3 class="fw-bold pt-4">{{InfoCard.title}}</h3>
     </div>
-    <div class="section-card-subtitle color-scorpion pt-3">
+    <div class="section-card-subtitle pt-3" :class="InfoCard.linkText ? 'color-alabaster' : 'color-scorpion'">
         {{InfoCard.subtitle}}
+    </div>
+    <div v-if="InfoCard.linkText" class="section-card-link pt-4">
+        <a href="">{{InfoCard.linkText}}</a>
     </div>
   </div>
 </template>
@@ -20,11 +23,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.section-card{
+
+.bg-lucky-point{
+    background-color: var(--color-lucky-point);
+    color: var(--color-alabaster);
+    
+}
+
+.bg-white{
     background-color: white;
+}
+
+.section-card{
     text-align: center;
     height: 100%;
-    padding: 3rem 2.5rem;
+    padding: 3rem 2.7rem;
     
     & i{
         color:var(--color-yellow-orange);
@@ -36,6 +49,11 @@ export default {
         &:hover{
             color: var(--color-yellow-orange);
         }
+    }
+
+    & .section-card-link a{
+        color: var(--color-yellow-orange);
+        text-decoration: none;
     }
 }
 

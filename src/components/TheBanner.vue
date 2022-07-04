@@ -1,15 +1,18 @@
 <template>
-  <section class="banner">
+  <section class="banner position-relative">
     <div class="banner-text text-center">
         <div class="banner-title">
-            <h2 class="fw-bold">Start Tour Free Consultation</h2>
+            <h2 class="fw-bold fs-1">Start Tour Free Consultation</h2>
         </div>
         <div class="banner-text-subtitle">
-            <p>Sed ut perspiciatis unde ominsistenatus error sit voluptatem accusantium doloremque laudantium</p> 
+            <p class="fs-5 mb-3">Sed ut perspiciatis unde ominsistenatus error sit voluptatem accusantium doloremque laudantium</p> 
         </div>
         <div class="banner-text-button">
-            <button class="btn my-btn-warning">CONTACT US NOW</button>
+            <button class="btn my-btn-warning ">CONTACT US NOW</button>
         </div>
+    </div>
+    <div class="banner-overlay">
+
     </div>
   </section>
 </template>
@@ -26,14 +29,26 @@ export default {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: .9;
+    opacity: 1;
     color: var(--color-alabaster);
-    padding-top: 6rem;
-    padding-bottom: 6rem ;
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem ;
 
     & .banner-text{
-        width: 25%;
+        width: 30%;
         margin: 0 auto;
+        position: relative;
+        z-index: 10;
+    }
+
+    & .banner-overlay{
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: black;
+        opacity: .6;
     }
 }
 </style>
