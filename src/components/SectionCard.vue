@@ -1,6 +1,6 @@
 <template>
   <div class="section-card" :class="InfoCard.linkText ? 'bg-lucky-point' : 'bg-white'">
-    <div><i class="fa-solid" :class="InfoCard.iconClass"></i></div>
+    <div><i :class="cardClass"></i></div>
     <div class="section-card-title">
         <h3 class="fw-bold pt-4">{{InfoCard.title}}</h3>
     </div>
@@ -16,7 +16,25 @@
 <script>
 export default {
     props:{
-        InfoCard : Object
+        InfoCard : Object,
+        
+    },
+    computed:{
+        cardClass(){
+            let toReturn = "fa-solid"
+
+            if (!this.InfoCard) {
+                return ''
+            }
+
+            if (this.InfoCard && this.InfoCard.iconPrefix) {
+                toReturn = this.InfoCard.iconPrefix
+
+
+            }
+
+            return toReturn + ' ' + this.InfoCard.iconClass
+        }
     }
 
 }

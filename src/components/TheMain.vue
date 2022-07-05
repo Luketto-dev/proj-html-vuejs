@@ -1,21 +1,28 @@
 <template>
     <main>
-        <SectionMeetNewAgency :info-cards="InfoCards"></SectionMeetNewAgency>
+        <SectionMeetNewAgency :info-cards="infoCards"></SectionMeetNewAgency>
         <SectionOurServices :info-cards="infoCardsOurServices"></SectionOurServices>
-        <SectionOurWorks :info-cards="InfoCardsOurWorks"></SectionOurWorks>
+        <SectionOurWorks :urls-images="urlsImagesOurWorks"></SectionOurWorks>
+        <SectionOurPlans :tariff-plans="tariffPlans"></SectionOurPlans>
+        <SectionOurNews :our-news="ourNews"></SectionOurNews>
+        <SectionReviews></SectionReviews>
         <TheBanner></TheBanner>
     </main>
 </template>
 
 <script>
-import SectionMeetNewAgency from './SectionMeetNewAgency.vue'
-import SectionOurServices from './SectionOurServices.vue'
-import SectionOurWorks from './SectionOurWorks.vue'
-import TheBanner from './TheBanner.vue'
+import SectionMeetNewAgency from './SectionMeetNewAgency.vue';
+import SectionOurServices from './SectionOurServices.vue';
+import SectionOurWorks from './SectionOurWorks.vue';
+import SectionOurPlans from './SectionOurPlans.vue';
+import SectionOurNews from './SectionOurNews.vue';
+import SectionReviews from './SectionReviews.vue';
+import TheBanner from './TheBanner.vue';
+
 export default {
     data(){
         return{
-            InfoCards:[
+            infoCards:[
                 {
                     iconClass: "fa-road",
                     title : "Establish Goals",
@@ -34,10 +41,11 @@ export default {
             ],
             infoCardsOurServices:[
                 {
-                    iconClass: "fa-google fa-brand",
+                    iconClass: "fa-google",
                     title: "Google SEO",
                     subtitle : "Vestibulum in lacinia metus, Suspendisse in enim ipsum. nulla faciis. Donec ante turpis, dictum sed magna et, dapibus faucibus odio.",
-                    linkText: "ReadMore"
+                    linkText: "ReadMore",
+                    iconPrefix: "fa-brands"
                 },
                 {
                     iconClass: "fa-gear",
@@ -58,23 +66,75 @@ export default {
                     linkText: "ReadMore"
                 },
             ],
-            InfoCardsOurWorks:[
+            urlsImagesOurWorks:[
                 "case-study-gallery-3-1-400x300.jpg",
                 "case-study-gallery-2-400x300.jpg",
                 "case-study-gallery-1-1-400x300.jpg",
                 "case-study-gallery-4-1-400x300.jpg",
                 "case-study-gallery-5-1-400x300.jpg",
                 "case-study-gallery-6-1-400x300.jpg",
-            ]
-            
+            ],
+            tariffPlans:[
+                {
+                    type: "Standard",
+                    price: 19.99,
+                    pojects : "5 Projects",
+                    storage: "5 GB Storage",
+                    users: "Unlimited Users"
+                },
+                {
+                    type: "Premium",
+                    price: 29.99,
+                    pojects : "10 Projects",
+                    storage: "15 GB Storage",
+                    users: "Unlimited Users"
+                },
+                {
+                    type: "Professional",
+                    price: 39.99,
+                    pojects : "15 Projects",
+                    storage: "30 GB Storage",
+                    users: "Unlimited Users"
+                },
+                {
+                    type: "Extreme",
+                    price: 59.99,
+                    pojects : "Unlimited Projects",
+                    storage: "Unlimited Storage",
+                    users: "Unlimited Users"
+                },
+            ],
+            ourNews:[
+                {
+                    urlImage:"related-service-2-320x202.jpg",
+                    title : "Why You Need A SEO Agency Now",
+                    date: "November 1st, 2017",
+                    paragraph: "ALorem ipsum sit amet, sonsectetur adipiscing elit. In et scelerisque sem. Nunc molestie neque augue, at gravida mi blandit"
+                },
+                {
+                    urlImage:"related-service-4-320x202.jpg",
+                    title : "SEO Tips For Your Startup",
+                    date: "December 1st, 2018",
+                    paragraph: "ALorem ipsum sit amet, sonsectetur adipiscing elit. In et scelerisque sem. Nunc molestie neque augue, at gravida mi blandit"
+                },
+                {
+                    urlImage:"blog-post-6-320x202.jpg",
+                    title : "Image Optimization For Your Site",
+                    date: "January 1st, 2019",
+                    paragraph: "ALorem ipsum sit amet, sonsectetur adipiscing elit. In et scelerisque sem. Nunc molestie neque augue, at gravida mi blandit"
+                },
+            ],
         }
     },
     components:{
-        SectionMeetNewAgency,
-        TheBanner,
-        SectionOurServices,
-        SectionOurWorks,
-    }
+    SectionMeetNewAgency,
+    TheBanner,
+    SectionOurServices,
+    SectionOurWorks,
+    SectionOurPlans,
+    SectionOurNews,
+    SectionReviews,
+}
 
 }
 </script>
