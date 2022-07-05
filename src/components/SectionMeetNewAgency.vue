@@ -7,9 +7,10 @@
         </div>
         <div class="meet-new-agency-cards pt-5 pb-2">
             <div class="row row-cols-3">
-                <div v-for="(InfoCard, i) in InfoCards" :key="i" class="col ">
-                    <!-- componente card -->
-                    <SectionCard :info-card="InfoCard"></SectionCard>
+                <!-- ciclo selle informazioni ricevute dal main -->
+                <div v-for="(infoCard, i) in infoCards" :key="i" class="col ">
+                    <!-- passo come props il singolo oggetto contenuto all interno dell array ricevuto dal main -->
+                    <SectionCard :info-card="infoCard"></SectionCard>
                 </div>
             </div>
         </div>
@@ -35,7 +36,8 @@ export default {
         }
     },
     props:{
-        InfoCards: Array
+        // mi salvo come props le informazioni ricevute dal main
+        infoCards: Array
     }
 
 }

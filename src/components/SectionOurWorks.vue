@@ -7,7 +7,9 @@
             </div>    
             <div class="our-works-cards pb-5">
                 <div class="row row-cols-3 gy-3">
+                    <!-- ciclo sull array ricevuto dal main -->
                     <div v-for="(urlImage, i) in urlsImages" :key="i" class="col">
+                        <!-- passo come props alla picturecard il singolo elemento all interno dell array ricevuto dal main -->
                         <PictureCard :url-image="urlImage"></PictureCard>
                     </div>
                 </div>
@@ -24,6 +26,7 @@ import PictureCard from './PictureCard.vue'
 
 export default {
     props:{
+        // salvo i dati iviati dal main
         urlsImages: Array
     },
     components:{

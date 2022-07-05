@@ -7,7 +7,9 @@
             </div>
             <div class="our-news-cards pb-5">
                 <div class="row row-cols-3">
+                    <!-- ciclo sull array ricevuto dal main -->
                     <div v-for="(singleNews, i) in ourNews" :key="i" class="col">
+                        <!-- passo come props a pictureCard il singolo oggetto contenuto nell array ourNews -->
                         <PictureCard :single-news="singleNews"></PictureCard>
                     </div>
                 </div>
@@ -26,6 +28,7 @@ export default {
         PictureCard,
     },
     props:{
+        // salvo l array ricevuto dal main
         ourNews: Array,
     }
 }

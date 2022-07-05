@@ -7,7 +7,9 @@
         </div>
         <div class="our-services-cards pt-5">
             <div class="row row-cols-4">
+                <!-- ciclo sui dati ricevuti dal main -->
                 <div v-for="(infoCard, i) in infoCards" :key="i" class="col">
+                    <!-- passo come prop alla section-card il singolo oggetto contenuto nell array ricevuto dal main -->
                     <SectionCard :info-card="infoCard"></SectionCard>
                 </div>
             </div>
@@ -20,6 +22,7 @@
 import SectionCard from "./SectionCard.vue";
 export default {
     props:{
+        // salvo i dati ricevuti dal main
         infoCards:Array
     },
     components:{

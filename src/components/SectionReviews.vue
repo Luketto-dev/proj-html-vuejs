@@ -8,7 +8,9 @@
                 <div class="color-scorpion"><span class="fw-bold">Luis Desaivo, </span>CREO TECH</div>
             </div>
             <div class="reviews-partner d-flex justify-content-center pt-5">
+                <!-- ciclo sull array  -->
                 <div v-for="(urlPartnerImg, i) in urlPartnersImg" :key="i"  class="reviews-partner-img">
+                    <!-- stampo le immagini attraverso un cilo  -->
                     <img :src="'/images/' + urlPartnerImg" alt="">
                 </div>
             </div>
@@ -20,6 +22,7 @@
 export default {
     data(){
         return{
+            // mi salvo in un array la url di ogni immagine
             urlPartnersImg:[
                 "clients_partner_5-200x202.png",
                 "clients_partner_6-200x202.png",

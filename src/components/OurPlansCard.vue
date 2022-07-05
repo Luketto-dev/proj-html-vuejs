@@ -4,7 +4,13 @@
             <h4 class="fw-bold">{{tariffPlan.type}}</h4>
         </div>
         <div class="our-plans-price pb-4 ">
-            <div class="fs-1">{{tariffPlan.price}}</div>
+            <span class="fs-1 position-relative">
+                {{tariffPlan.price}}
+                <div class="dollar-symbol">$</div>
+                <div class="cents-symbol">99</div>
+                <div class="label-monthly">monthly</div>
+            </span>
+            
         </div>
         <div class="our-plans-project pb-4">
             {{tariffPlan.pojects}}
@@ -22,6 +28,7 @@
 <script>
 export default {
     props:{
+        // salvo il singolo oggetto ricevuto dalla sezione
         tariffPlan: Object
     }
 
@@ -34,5 +41,35 @@ export default {
     text-align: center;
     padding-top: 2rem;
     padding-bottom: 2rem;
+
+    & .our-plans-price{
+        color: var(--color-science-blue);
+        font-weight: 900;
+
+        & .dollar-symbol{
+            position: absolute;
+            top: 5px;
+            left: -10px;
+            font-size: 1rem;
+            color: var(--color-scorpion);
+            font-weight: bold;
+        }
+
+        & .cents-symbol{
+            position: absolute;
+            top: 5px;
+            right: -15px;
+            font-size: .8rem;
+
+        }
+
+        & .label-monthly{
+            position: absolute;
+            bottom: 7px;
+            right: -35px;
+            font-size: .6rem;
+            color: var(--color-scorpion);
+        }
+    }
 }
 </style>

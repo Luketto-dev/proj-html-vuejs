@@ -8,6 +8,7 @@
                     </div>
                     <div class="menu d-flex flex-grow-1 align-items-center">
                         <ul class="menu-list d-flex flex-grow-1 justify-content-end">
+                            <!-- ciclo sulla lista dei link dell headear per stamparli in html -->
                             <li v-for="(link,i) in headerLinks" :key="i"  class="menu-list-item">
                                 <a class="menu-list-item-link" href="#">
                                     {{link}}
@@ -19,9 +20,10 @@
                         </div>
                     </div>
                 </div>
-            </div>      
+            </div>
+            <TheJumbotron></TheJumbotron>      
         </header>
-        <TheJumbotron></TheJumbotron>
+        
 </div>
 </template>
 
@@ -33,6 +35,7 @@ export default {
     },
     data(){
         return{
+            // salvo la lista dei link in un array per poi stamparli attraverso un ciclo
             headerLinks:[
                 "Home",
                 "Who We Are",
@@ -48,10 +51,10 @@ export default {
 
 <style lang="scss" scoped>
 header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    background-image: url("../../public/images/1-hero-image.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
 }
 .my-navbar{
     font-size: .9rem;
@@ -79,6 +82,11 @@ header{
                 padding: .5rem 1rem;
                 color: var(--color-alabaster);
                 display: block;
+                transition: all .3 ease-in-out;
+
+                &:hover{
+                    color: var(--color-yellow-orange);
+                }
             }
         }
 

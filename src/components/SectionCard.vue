@@ -1,14 +1,14 @@
 <template>
-  <div class="section-card" :class="InfoCard.linkText ? 'bg-lucky-point' : 'bg-white'">
-    <div><i :class="cardClass"></i></div>
+  <div class="section-card" :class="infoCard.linkText ? 'bg-lucky-point' : 'bg-white'">
+    <div><i :class="iconClass"></i></div>
     <div class="section-card-title">
-        <h3 class="fw-bold pt-4">{{InfoCard.title}}</h3>
+        <h3 class="fw-bold pt-4">{{infoCard.title}}</h3>
     </div>
-    <div class="section-card-subtitle pt-3" :class="InfoCard.linkText ? 'color-alabaster' : 'color-scorpion'">
-        {{InfoCard.subtitle}}
+    <div class="section-card-subtitle pt-3" :class="infoCard.linkText ? 'color-alabaster' : 'color-scorpion'">
+        {{infoCard.subtitle}}
     </div>
-    <div v-if="InfoCard.linkText" class="section-card-link pt-4">
-        <a href="">{{InfoCard.linkText}}</a>
+    <div v-if="infoCard.linkText" class="section-card-link pt-4">
+        <a href="">{{infoCard.linkText}}</a>
     </div>
   </div>
 </template>
@@ -16,24 +16,26 @@
 <script>
 export default {
     props:{
-        InfoCard : Object,
+        // salvo l oggetto ricevuto dalla sezione
+        infoCard : Object,
         
     },
     computed:{
-        cardClass(){
+        // funzione che ritorna le classi da aggiungere  alle icone
+        iconClass(){
             let toReturn = "fa-solid"
 
-            if (!this.InfoCard) {
+            if (!this.infoCard) {
                 return ''
             }
 
-            if (this.InfoCard && this.InfoCard.iconPrefix) {
-                toReturn = this.InfoCard.iconPrefix
+            if (this.infoCard && this.infoCard.iconPrefix) {
+                toReturn = this.infoCard.iconPrefix
 
 
             }
 
-            return toReturn + ' ' + this.InfoCard.iconClass
+            return toReturn + ' ' + this.infoCard.iconClass
         }
     }
 

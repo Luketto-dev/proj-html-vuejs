@@ -7,7 +7,9 @@
             </div>
             <div class="our-plans-cards pt-5">
                 <div class="row row-cols-4">
+                    <!-- ciclo sull array arrivato dal main -->
                     <div v-for="(tariffPlan,i) in tariffPlans" :key="i" class="col">
+                        <!-- passo come props a ourPlansCard il singolo oggetto contenuto nell array -->
                         <OurPlansCard :tariff-plan="tariffPlan"></OurPlansCard>
                     </div>
                 </div>
@@ -20,6 +22,7 @@
 import OurPlansCard from './OurPlansCard.vue'
 export default {
     props:{
+        // salvo i dati arrivati dal main
         tariffPlans: Array,
     },
     components:{

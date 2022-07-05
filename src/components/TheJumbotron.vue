@@ -34,10 +34,7 @@ export default {
 
 <style lang="scss" scoped>
 .jumbotron{
-    background-image: url("../../public/images/1-hero-image.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    
 
     & .jumbotron-content{
 

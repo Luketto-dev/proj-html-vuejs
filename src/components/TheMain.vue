@@ -1,9 +1,14 @@
 <template>
     <main>
-        <SectionMeetNewAgency :info-cards="infoCards"></SectionMeetNewAgency>
+        <!-- passo alla sezione come props l array che contine le informazioni per stampare la card -->
+        <SectionMeetNewAgency :info-cards="avadaTeam"></SectionMeetNewAgency>
+        <!-- passo alla sezione come props l array che contiene i nostri servizi per stamparli in una card -->
         <SectionOurServices :info-cards="infoCardsOurServices"></SectionOurServices>
+        <!-- passo come props alla sezione gli url delle immagini che andrò a stampare  -->
         <SectionOurWorks :urls-images="urlsImagesOurWorks"></SectionOurWorks>
+        <!-- passo come props alla sezione l array che contine i piani tariffari per poi stamparli in una card -->
         <SectionOurPlans :tariff-plans="tariffPlans"></SectionOurPlans>
+        <!-- passo come props alla sezione l array che contine le nostre news per poi stamprle in una card -->
         <SectionOurNews :our-news="ourNews"></SectionOurNews>
         <SectionReviews></SectionReviews>
         <TheBanner></TheBanner>
@@ -22,7 +27,8 @@ import TheBanner from './TheBanner.vue';
 export default {
     data(){
         return{
-            infoCards:[
+            // mi salvo in un array la lista dei vari elementi checompongono le card da stampare
+            avadaTeam:[
                 {
                     iconClass: "fa-road",
                     title : "Establish Goals",
@@ -39,6 +45,7 @@ export default {
                     subtitle: "Vestibulum scelerisque egestas lectus sit amet molestie. Donec consectetur cursus est sed blandit. Nunc sed risus lacus."
                 }
             ],
+            // salvo in un array la lista dei servizi formati da elementi che stamperò in una card
             infoCardsOurServices:[
                 {
                     iconClass: "fa-google",
@@ -66,6 +73,7 @@ export default {
                     linkText: "ReadMore"
                 },
             ],
+            // lista di url per stampare immagini
             urlsImagesOurWorks:[
                 "case-study-gallery-3-1-400x300.jpg",
                 "case-study-gallery-2-400x300.jpg",
@@ -74,36 +82,38 @@ export default {
                 "case-study-gallery-5-1-400x300.jpg",
                 "case-study-gallery-6-1-400x300.jpg",
             ],
+            //salvo i piani tariffari che offriamo coi i prezzi
             tariffPlans:[
                 {
                     type: "Standard",
-                    price: 19.99,
+                    price: 19,
                     pojects : "5 Projects",
                     storage: "5 GB Storage",
                     users: "Unlimited Users"
                 },
                 {
                     type: "Premium",
-                    price: 29.99,
+                    price: 29,
                     pojects : "10 Projects",
                     storage: "15 GB Storage",
                     users: "Unlimited Users"
                 },
                 {
                     type: "Professional",
-                    price: 39.99,
+                    price: 39,
                     pojects : "15 Projects",
                     storage: "30 GB Storage",
                     users: "Unlimited Users"
                 },
                 {
                     type: "Extreme",
-                    price: 59.99,
+                    price: 59,
                     pojects : "Unlimited Projects",
                     storage: "Unlimited Storage",
                     users: "Unlimited Users"
                 },
             ],
+            // salvo lista delle news 
             ourNews:[
                 {
                     urlImage:"related-service-2-320x202.jpg",
