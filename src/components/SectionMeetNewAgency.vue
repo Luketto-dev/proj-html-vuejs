@@ -1,9 +1,9 @@
 <template>
   <section class="meet-new-agency">
     <div class="container">
-        <div class="meet-new-agency-text text-center">
-            <h2 class="fw-bold">Meet The New Agency SEO Template <br> From The Avada Team</h2>
-            <div class="color-scorpion">Sed ut perspiciatis unde omnis iste natus error sit voluptatem <br> accusantium dolormque laudantium.</div>
+        <div class="meet-new-agency-text">
+            <h2 class="fw-bold">Meet The New Agency SEO Template From The Avada Team</h2>
+            <div class="color-scorpion">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolormque laudantium.</div>
         </div>
         <div class="meet-new-agency-cards pt-5 pb-2">
             <div class="row row-cols-3">
@@ -47,6 +47,12 @@ export default {
 .meet-new-agency{
     background-color: var(--color-alabaster);
     padding-bottom: 0;
+
+    & .meet-new-agency-text{
+        width: 40%;
+        margin: 0 auto;
+        text-align: center;
+    }
 
     & .meet-new-agency-poster img{
         width: 100%;
